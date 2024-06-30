@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="Profile.css">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <header>
+            <button id="toggleModeButton">Toggle Dark/Light Mode</button>
+        </header>
+        <section class="profile-section">
+            <h1>Perfil do Usuário</h1>
+            <div class="profile-info">
+                <img id="profileAvatar" src="" alt="User Avatar" class="avatar">
+                <h2 id="profileUsername"></h2>
+                <button id="editProfileButton">Editar Perfil</button>
+            </div>
+            <form id="editProfileForm" style="display: none;">
+                <div class="user-box">
+                    <input type="text" id="editUsername" placeholder="New Username" required>
+                </div>
+                <div class="user-box">
+                    <input type="file" id="editAvatar" accept="image/*">
+                </div>
+                <button type="button" onclick="saveProfile()">Salvar</button>
+                <button type="button" onclick="cancelEdit()">Cancelar</button>
+            </form>
+        </section>
+        <section class="library-section">
+            <h2>Minha Biblioteca de Jogos</h2>
+            <div id="libraryGames" class="games"></div>
+        </section>
+        <footer>
+            <button onclick="window.history.back()">Voltar</button>
+        </footer>
+    </div>
+    <script src="profile.js"></script>
+    <script src="toggleMode.js"></script>
+</body>
+</html>
